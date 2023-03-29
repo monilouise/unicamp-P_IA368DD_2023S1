@@ -327,6 +327,9 @@ def main():
         else None,
     )
 
+    # Evaluation before training
+    eval_on_vaidation_set(data_args, eval_dataset, trainer, training_args)
+
     # Training
     if training_args.do_train:
         checkpoint = None
@@ -349,6 +352,24 @@ def main():
         trainer.save_state()
 
     # Evaluation
+    eval_on_vaidation_set(data_args, eval_dataset, trainer, training_args)
+
+    kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "text-generation"}
+    if data_args.dataset_name is not None:
+        kwargs["dataset_tags"] = data_args.dataset_name
+        if data_args.dataset_config_name is not None:
+            kwargs["dataset_args"] = data_args.dataset_config_name
+            kwargs["dataset"] = f"{data_args.dataset_name} {data_args.dataset_config_name}"
+        else:
+            kwargs["dataset"] = data_args.dataset_name
+
+    if training_args.push_to_hub:
+        trainer.push_to_hub(**kwargs)
+    else:
+        trainer.create_model_card(**kwargs)
+
+
+def eval_on_vaidation_set(data_args, eval_dataset, trainer, training_args):
     if training_args.do_eval:
         print("*** Evaluate ***")
 
@@ -365,19 +386,6 @@ def main():
         trainer.log_metrics("eval", metrics)
         trainer.save_metrics("eval", metrics)
 
-    kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "text-generation"}
-    if data_args.dataset_name is not None:
-        kwargs["dataset_tags"] = data_args.dataset_name
-        if data_args.dataset_config_name is not None:
-            kwargs["dataset_args"] = data_args.dataset_config_name
-            kwargs["dataset"] = f"{data_args.dataset_name} {data_args.dataset_config_name}"
-        else:
-            kwargs["dataset"] = data_args.dataset_name
-
-    if training_args.push_to_hub:
-        trainer.push_to_hub(**kwargs)
-    else:
-        trainer.create_model_card(**kwargs)
 
 if __name__ == '__main__':
     main()
