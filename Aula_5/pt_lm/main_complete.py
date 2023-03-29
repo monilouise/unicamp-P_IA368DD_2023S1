@@ -1,5 +1,8 @@
 """
 Adapted from  https://github.com/huggingface/transformers/blob/main/examples/pytorch/language-modeling/run_clm.py
+
+This adaptation trains a Portuguese language model on a reduced corpus, by using OPT-125M ad checkpoint.
+To test the resulting language model, use test.py.
 """
 
 import math
@@ -27,11 +30,13 @@ from transformers.trainer_utils import get_last_checkpoint
 from data_training_arguments import DataTrainingArguments
 from model_arguments import ModelArguments
 
+MODEL_NAME_OR_PATH = "facebook/opt-125m"
+
+BLOCK_SIZE = 1024
+BATCH_SIZE = 4
+
 main_dir = "."
 data_file = path.join(main_dir, "data","sample-1gb.txt")
-
-
-
 
 def main():
     training_args = TrainingArguments(output_dir=f'{main_dir}/opt-PT')
@@ -39,10 +44,12 @@ def main():
     training_args.do_train = True
     training_args.do_eval = True
     training_args.overwrite_output_dir = True
-    training_args.per_device_train_batch_size = 4
-    training_args.per_device_eval_batch_size = 4
+    training_args.per_device_train_batch_size = BATCH_SIZE
+    training_args.per_device_eval_batch_size = BATCH_SIZE
     training_args.save_strategy = 'epoch'
     training_args.fp16 = True  # Use mixed precision
+
+    training_args.num_train_epochs = 4
 
     if training_args.should_log:
         # The default of training_args.log_level is passive, so we set log level at info here to have that default.
@@ -98,10 +105,10 @@ def main():
     dataset_args["keep_linebreaks"] = data_args.keep_linebreaks
 
     model_args = ModelArguments(cache_dir=main_dir, model_type="opt",
-                                model_name_or_path="facebook/opt-125m",
+                                model_name_or_path=MODEL_NAME_OR_PATH,
                                 # TODO: Revisar a questão do fast tokenizer
                                 use_fast_tokenizer=False
-    )
+                                )
 
     raw_datasets = load_dataset(extension, data_files=data_files,
                                 cache_dir=model_args.cache_dir,
@@ -218,13 +225,13 @@ def main():
 
     if data_args.block_size is None:
         block_size = tokenizer.model_max_length
-        if block_size > 1024:
+        if block_size > BLOCK_SIZE:
             print(
                 "The chosen tokenizer supports a `model_max_length` that is longer than the default `block_size` value"
                 " of 1024. If you would like to use a longer `block_size` up to `tokenizer.model_max_length` you can"
                 " override this default with `--block_size xxx`."
             )
-            block_size = 1024
+            block_size = BLOCK_SIZE
     else:
         if data_args.block_size > tokenizer.model_max_length:
             print(
