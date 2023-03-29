@@ -1,0 +1,29 @@
+/home/TCU/moniquebm/Documents/unicamp/pt_lm/venv/bin/python /home/TCU/moniquebm/Documents/unicamp/pt_lm/test.py
+Modelo facebook/opt-125m: Era uma vez que vai a ser rejeitada.  Vai fazer coisas no rros
+Sou no rros, se qual cria um mês de nocivazão?
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez uma família grande. Tudo corria tranquilo quase na rua em que estávamos numa das casas, os dois piscando em direção
+Modelo facebook/opt-125m: Era uma vez que o ex Rhodes e o futebolista de Portugal vai obrigar os que o presidente Michel Temer se eleira sabe às eleições. Como a
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez o "bicho que voa". Atravessou de maneira singular essa paisagem. Depois de alguns minutos, como mãe, uma sé
+Modelo facebook/opt-125m: Era uma vez na FPT-FDA se fazem as médias entre a propriação do estado de apagassezimento de medo de segurança púb
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez uma viúva de fé que com o seu filho estuda em Colnago, no sul de Macedónia, e que era uma criança em uma cidade
+Modelo facebook/opt-125m: Era uma vez, segundo um homem, e uma página. Ainda que os meios com eles não estão em suas opiniões, pela cidade
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez por semana, o que é pior. Fazer o ponto final naquele dia, seis horas e uma noite de chuva, e o resultado era esper
+Modelo facebook/opt-125m: Era uma vez a suposta de quase 2 días não acredita o nome do ocorreir. E tem as últimas dos geraldos, com um risco
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez no interior de uma cidade em áreas de terra muito povoadas e com abundância de animais abatidos sob a alegação
+Modelo facebook/opt-125m: Era uma vez assim por que me explica como o ministro eu quero estar quando a mesma assim que fiz, eu não é, mas isto ficaria t
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez na praia, quando um pinguim me atirou, eu estava a fazer a segunda aula quando o menino se ajoelhou na cadeira e
+Modelo facebook/opt-125m: Era uma vez não estará mais que o meu homem
+Haha pra um geralmente de "bras falta", essa é muito bom.
+São seus
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez como a mãe, que ainda guarda os selinhos da escola no armário. O filho me contava o que lhe tinha acontecido, com
+Modelo facebook/opt-125m: Era uma vez no Facebook para os mesmos dossais.
+Ou seja que já tenha muitas vezes, um más cedo.
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez um jornalista paulistano cujo trabalho era ler um livro em "Batalha dos Correios", escrito por um dos editoriais do periód
+Modelo facebook/opt-125m: Era uma vez do governo, não é acho de "emenda"
+Por Lusa | 02:57
+Vai ajudar ao presidente Jair Bolsonaro diz que não
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez um homem querendo vender uma mísera quantidade de terrenos em Roma; mas, diante da má fama que o caso lhe causava,
+Modelo facebook/opt-125m: Era uma vez após uma desenvolvimento de campanha que uma minha minha filha dava a pouca e deixou à casa de um boteiro.
+Modelo 1024_tokens_4_bs/opt-PT/checkpoint-303861: Era uma vez o amor. E como os dizeres de meus pais (muito provisórios e ficaram tão marcantes), a vida, no meu cas
+
+Process finished with exit code 0
