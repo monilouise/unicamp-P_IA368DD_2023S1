@@ -1,0 +1,8 @@
+# @package data
+
+type: hard_negatives
+TRAIN:
+  DATASET_PATH: data/pt/scores/m_marco.pkl.gz
+  D_COLLECTION_PATH: data/pt/corpus
+  Q_COLLECTION_PATH: data/pt/queries
+  QREL_PATH: data/pt/qrel/qrel.json

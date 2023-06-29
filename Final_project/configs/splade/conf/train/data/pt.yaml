@@ -1,0 +1,11 @@
+# @package data
+
+type: triplets
+
+TRAIN_DATA_DIR: data/pt/triplets
+VALIDATION_SIZE_FOR_LOSS: 60000
+VALIDATION_FULL_RANKING:
+  D_COLLECTION_PATH: data/pt/val_retrieval/collection
+  Q_COLLECTION_PATH: data/pt/val_retrieval/queries
+  QREL_PATH: data/pt/val_retrieval/qrel.json
+  TOP_K: 500

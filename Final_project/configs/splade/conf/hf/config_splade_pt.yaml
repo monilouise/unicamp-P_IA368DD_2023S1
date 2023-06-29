@@ -1,0 +1,21 @@
+# FILES
+defaults: # (these specify which config FILES to use)
+  ############## TRAIN ###################################
+  - train/config: splade_pt
+  - train/data: hf_pt
+  - train/model: splade_bertimbau_base
+  ############## INDEX ###################################
+  - index: pt
+  ############## RETRIEVE ################################
+  - retrieve_evaluate: pt
+  ############### FLOPS ##################################
+  - flops: pt
+  ################ HF TRAINING ###########################
+  - hf: training
+
+
+# Direct PARAMETER setting
+config: # to be provided for each run
+  checkpoint_dir: experiments/pt/checkpoint_hf
+  index_dir: ???
+  out_dir: ???

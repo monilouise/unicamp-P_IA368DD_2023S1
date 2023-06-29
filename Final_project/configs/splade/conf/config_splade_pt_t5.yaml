@@ -1,0 +1,18 @@
+# FILES
+defaults: # (these specify which config FILES to use)
+  ############## TRAIN ###################################
+  - train/config: splade_pt_t5
+  - train/data: pt
+  - train/model: splade_ptt5
+  ############## INDEX ###################################
+  - index: pt
+  ############## RETRIEVE ################################
+  - retrieve_evaluate: pt
+  ############### FLOPS ##################################
+  - flops: pt
+
+# Direct PARAMETER setting
+config: # to be provided for each run
+  checkpoint_dir: ???
+  index_dir: ???
+  out_dir: ???

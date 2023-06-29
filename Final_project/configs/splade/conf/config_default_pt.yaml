@@ -1,15 +1,15 @@
 # FILES
 defaults:  # (these specify which config FILES to use)
   ############## TRAIN ###################################
-  - train/config: splade_toy
+  - train/config: splade_monogpu_pt
   - train/data: pt
-  - train/model: splade
+  - train/model: splade_bertimbau_base
   ############## INDEX ###################################
-  - index: toy
+  - index: pt
   ############## RETRIEVE ################################
-  - retrieve_evaluate: toy
+  - retrieve_evaluate: pt
   ############### FLOPS ##################################
-  - flops: toy
+  - flops: pt
 
 # Direct PARAMETER setting
 config:  # to be provided for each run

@@ -1,0 +1,12 @@
+# @package _global_
+
+init_dict:
+  model_type_or_dir: unicamp-dl/ptt5-v2-base-mc4pt-constant-lr-4-epochs-8059900-steps
+  #model_type_or_dir: unicamp-dl/ptt5-base-portuguese-vocab
+  model_type_or_dir_q: null
+  freeze_d_model: 0
+  agg: max
+  fp16: true
+
+config:
+  tokenizer_type: unicamp-dl/ptt5-base-portuguese-vocab
